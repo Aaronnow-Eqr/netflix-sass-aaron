@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 150px 60px;
+  margin: 0px;
+  gap: 0px;
+}
+nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px 0px;
+  gap: 20px;
+}/*# sourceMappingURL=styles.css.map */
