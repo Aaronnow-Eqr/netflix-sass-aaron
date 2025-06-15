@@ -2,6 +2,30 @@
 @import './components/_mixings.sass'
 
 nav 
-  @include flex(row, space-between, center,35px 150px 60px,0px, 0px)
+  @include flex(row, space-between, center)
+  @include espacio(35px 150px 60px, 0px, 0px)
   div
-    @include flex(row,center,center,0px, 0px 0px, 20px)
+    @include flex(row,center,center)
+    @include espacio(0px, 0px, 20px)
+.hero-contenedor
+  @include flex(null, center, center)
+  @include rango(null, 45rem)
+  .hero 
+    @include flex(column, space-between, center)
+    @include rango(30%,null)
+.hero h1
+  @include texto(#000, 3.5rem, 700, null) 
+  text-align: center
+  margin: 0px 0px 20px
+.hero h2 
+  @include texto(#000, 1.25rem, 500,null)
+  text-align: center
+  margin: 0px 0px 30px
+.hero h3 
+  @include texto(#000, 1rem, 400, 1.5)  
+  text-align: center
+  margin: 0px 0px 20px
+
+.form
+  div
+    display: flex

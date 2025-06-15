@@ -1,8 +1,20 @@
-@mixin flex($direccion, $justificacion, $alineacion, $padding, $margen, $gap)
+@mixin flex($direccion, $justificacion, $alineacion)
   display: flex
   flex-direction: $direccion
   justify-content: $justificacion
   align-items: $alineacion
+
+@mixin espacio($padding, $margen, $gap)
   padding: $padding
   margin: $margen
   gap: $gap
+
+@mixin texto($color, $tamano, $ancho, $linea)
+  color: $color
+  font-size: $tamano
+  font-weight: $ancho
+  line-height: $linea
+
+@mixin rango($ancho, $alto)
+  width: $ancho
+  height: $alto
