@@ -101,7 +101,7 @@ nav button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45rem;
+  height: 40rem;
 }
 .header-contenedor .titulos {
   display: flex;
@@ -323,4 +323,49 @@ nav button {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px;
+    margin: 0;
+    gap: 0;
+  }
+  .header-contenedor {
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+  }
+  .titulos {
+    width: 100%;
+    text-align: center;
+  }
+  .titulos h1 {
+    font-size: 2rem;
+  }
+  .titulos h2 {
+    font-size: 1rem;
+  }
+  .titulos h3 {
+    font-size: 0.9rem;
+  }
+  .formulario, .formulario-membresia {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .formulario input, .formulario button, .formulario-membresia input, .formulario-membresia button {
+    width: 100%;
+  }
+  .tendencias {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 0 0 40px;
+  }
+  .tendencias div {
+    padding: 10px 0;
+  }
+  .tendencias img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -12,7 +12,7 @@ nav
 
 .header-contenedor
   @include flex(null, center, center)
-  @include rango(null, 45rem)
+  @include rango(null, 40rem)
   .titulos 
     @include flex(column, space-between, center)
     @include rango(30%,null)
@@ -39,7 +39,6 @@ nav
     @include boton(space-evenly , center) 
     flex-grow: 1
 
-
 .separador
   width: 100%
   height: 5px
@@ -48,6 +47,7 @@ nav
 .tendencias-titulo
   @include texto(#ffffff, 24px, 500, null)
   @include espacio(50px 150px 0 150px, 0 0 1rem, null )
+
 .tendencias
   @include flex(row, space-between, center)
   @include espacio(0 150px 0 150px,0 0 65px, null)
@@ -141,3 +141,52 @@ nav
     text-align: center
     margin-top: 20px
     margin-bottom: 100px
+
+
+// ==========================
+// ESTILOS RESPONSIVOS
+// ==========================
+
+// Esto hace que los estilos dentro solo se apliquen cuando el ancho de la pantalla
+// sea de 768px o menos (como en teléfonos o tablets en vertical)
+@media (max-width: 768px)
+
+  // NAVBAR: ajustamos los márgenes del nav para que se vean bien en pantallas pequeñas
+  nav
+    @include espacio(20px, 0, 0)
+
+  // HEADER: hacemos que los títulos usen menos espacio vertical
+  .header-contenedor
+    @include espacio(20px, 20px, 20px)
+
+  .titulos
+    @include rango(100%, null) // hacemos que use todo el ancho disponible
+    text-align: center
+
+  .titulos h1
+    font-size: 2rem // reducimos tamaño para móviles
+
+  .titulos h2
+    font-size: 1rem
+
+  .titulos h3
+    font-size: 0.9rem
+
+  // FORMULARIO: ponemos el input y el botón uno debajo del otro
+  .formulario, .formulario-membresia
+    align-items: center
+    flex-direction: column
+    gap: 10px
+    input, button
+      width: 100%
+
+  // TENDENCIAS: colocamos las imágenes una debajo de otra o usamos scroll horizontal
+  .tendencias
+    flex-direction: column
+    @include espacio(0 20px, 0 0 40px, null)
+
+    div
+      @include espacio(10px 0, null, null)
+
+    img
+      width: 100%
