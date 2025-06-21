@@ -135,7 +135,7 @@ nav
     gap: 10px
   a
     @include texto(#818181, 16px, 500, null)
-.copyright
+.texto-copy
     @include espacio(0 150px 0 150px,0 0 65px, null)
     @include texto(#696969, 16px, 500, null)
     text-align: center
@@ -143,50 +143,91 @@ nav
     margin-bottom: 100px
 
 
-// ==========================
-// ESTILOS RESPONSIVOS
-// ==========================
 
-// Esto hace que los estilos dentro solo se apliquen cuando el ancho de la pantalla
-// sea de 768px o menos (como en teléfonos o tablets en vertical)
+
+//RESPONSIVE
+
 @media (max-width: 768px)
-
-  // NAVBAR: ajustamos los márgenes del nav para que se vean bien en pantallas pequeñas
+  //navbar
   nav
     @include espacio(20px, 0, 0)
+    .logo
+      width: 100px
+      height: 25px
 
-  // HEADER: hacemos que los títulos usen menos espacio vertical
+  // header
   .header-contenedor
     @include espacio(20px, 20px, 20px)
-
-  .titulos
-    @include rango(100%, null) // hacemos que use todo el ancho disponible
-    text-align: center
+    .titulos
+      width: 90%
 
   .titulos h1
-    font-size: 2rem // reducimos tamaño para móviles
+    font-size: 2.5rem 
 
   .titulos h2
-    font-size: 1rem
+    font-size: 1.5rem
 
   .titulos h3
-    font-size: 0.9rem
+    font-size: 1rem
+    padding: 20px
 
-  // FORMULARIO: ponemos el input y el botón uno debajo del otro
+  // formulario
   .formulario, .formulario-membresia
     align-items: center
     flex-direction: column
     gap: 10px
-    input, button
-      width: 100%
+  .formulario, .formulario-membresia
+    input 
+      width: 350px !important
+    button
+      width: 140px
 
-  // TENDENCIAS: colocamos las imágenes una debajo de otra o usamos scroll horizontal
+  // tendencias
+  .tendencias-titulo
+    display: flex
+    justify-content: center
+    padding: 20px
+    
   .tendencias
-    flex-direction: column
-    @include espacio(0 20px, 0 0 40px, null)
+    padding: 0px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
 
-    div
-      @include espacio(10px 0, null, null)
+  // beneficios
+  .beneficios-titulo
+    text-align: center
+    padding: 20px
 
-    img
-      width: 100%
+  .beneficios
+    padding: 20px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2,1fr)
+    justify-content: center
+
+  .beneficio
+    text-align: center
+    h3
+      font-size: 2rem
+      padding-bottom: 20px
+    p
+      line-height: 2
+    i
+      width: 60px
+
+  //preguntas frecuentes
+  .preguntasfrecuentes-titulo
+    display: flex
+    justify-content: center
+  .preguntas-frecuentes
+    padding: 20px
+    .btn
+      font-size: 1rem
+
+  // footer
+  .footer-links
+    ul
+      font-size: 0.8rem
+      @include espacio(20px, 10px, 10px)
+  .texto-copy
+    padding: 35px
